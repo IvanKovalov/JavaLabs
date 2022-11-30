@@ -11,6 +11,11 @@ public class Flat {
     private final Random random = new Random();
 
     public void generateDevice(int expectedDeviceAmount) {
+        if (expectedDeviceAmount <= 0) {
+            System.err.println("ExpectedDeviceAmount must be > 0");
+            System.exit(1);
+        }
+
         for (int deviceCount = 0; deviceCount < expectedDeviceAmount; deviceCount++) {
             int randomNumber = (random.nextInt(3));
             switch (randomNumber) {
@@ -61,10 +66,16 @@ public class Flat {
     }
 
     public void searchDeviceByDiapason(int min, int max) {
+
+        if (max < 0) {
+            System.err.println("Max value must be > 0");
+            return;
+        }
+
         System.out.println("-----------");
         System.out.println("Search by diapason");
         List<ElectricalDevice> searchedElectricalDevices = electricalDevices.stream()
-                .filter(electricalDevice -> electricalDevice.getPower() > min && electricalDevice.getPower() < max)
+                .filter(electricalDevice -> electricalDevice.getElectricMagneticPower() > min && electricalDevice.getElectricMagneticPower() < max)
                 .collect(Collectors.toList());
         if (searchedElectricalDevices.isEmpty()) {
             System.out.println("Nothing found");
