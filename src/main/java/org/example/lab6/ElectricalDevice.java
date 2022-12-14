@@ -1,7 +1,5 @@
 package org.example.lab6;
 
-import java.util.Objects;
-
 public class ElectricalDevice {
 
     private int power;
@@ -41,21 +39,8 @@ public class ElectricalDevice {
     @Override
     public String toString() {
         return "ElectricalDevice " +
-                "power=" + power +
+                "power=" +
                 ", isActive=" + isActive +
                 ", electricMagneticPower=" + electricMagneticPower;
-    }
-
-    @Override
-    public boolean equals(Object o) {
-        if (this == o) return true;
-        if (o == null || getClass() != o.getClass()) return false;
-        ElectricalDevice that = (ElectricalDevice) o;
-        return power == that.power && isActive == that.isActive && electricMagneticPower == that.electricMagneticPower;
-    }
-
-    @Override
-    public int hashCode() {
-        return Objects.hash(power, isActive, electricMagneticPower);
     }
 }
