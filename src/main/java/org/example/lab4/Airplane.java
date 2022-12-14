@@ -2,14 +2,14 @@ package org.example.lab4;
 
 import java.util.Objects;
 
-public class Plain {
+public class Airplane {
     private int place;
     private int size;
     private int serialNumber;
     private int fuel;
     private int floor;
 
-    Plain(int place, int size, int serialNumber, int fuel, int floor) {
+    Airplane(int place, int size, int serialNumber, int fuel, int floor) {
         this.place = place;
         this.size = size;
         this.floor = floor;
@@ -59,7 +59,7 @@ public class Plain {
 
     @Override
     public String toString() {
-        return "Plain{" +
+        return "Airplane{" +
                 "place=" + place +
                 ", size=" + size +
                 ", serialNumber=" + serialNumber +
@@ -72,7 +72,7 @@ public class Plain {
     public boolean equals(Object o) {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
-        Plain plain = (Plain) o;
+        Airplane plain = (Airplane) o;
         return place == plain.place && size == plain.size && floor == plain.floor && Objects.equals(serialNumber, plain.serialNumber) && Objects.equals(fuel, plain.fuel);
     }
 
