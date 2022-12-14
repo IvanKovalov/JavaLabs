@@ -9,8 +9,8 @@ public class TV extends ElectricalDevice {
     @Override
     public String toString() {
         return "TV " +
-                "power=" + this.getPower() +
-                ", isActive=" + this.isActive() +
-                ", electricMagneticPower=" + this.getElectricMagneticPower();
+                "power=" + getPower() +
+                ", isActive=" + isActive() +
+                ", electricMagneticPower=" + getElectricMagneticPower();
     }
 }

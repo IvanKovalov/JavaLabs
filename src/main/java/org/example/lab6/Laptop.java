@@ -9,8 +9,8 @@ public class Laptop extends ElectricalDevice {
     @Override
     public String toString() {
         return "Laptop " +
-                "power=" + this.getPower() +
-                ", isActive=" + this.isActive() +
-                ", electricMagneticPower=" + this.getElectricMagneticPower();
+                "power=" + getPower() +
+                ", isActive=" + isActive() +
+                ", electricMagneticPower=" + getElectricMagneticPower();
     }
 }

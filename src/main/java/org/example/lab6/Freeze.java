@@ -9,8 +9,8 @@ public class Freeze extends ElectricalDevice {
     @Override
     public String toString() {
         return "Freeze " +
-                "power=" + this.getPower() +
-                ", isActive=" + this.isActive() +
-                ", electricMagneticPower=" + this.getElectricMagneticPower();
+                "power=" + getPower() +
+                ", isActive=" + isActive() +
+                ", electricMagneticPower=" + getElectricMagneticPower();
     }
 }
